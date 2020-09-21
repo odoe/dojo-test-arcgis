@@ -1,6 +1,6 @@
 import { tsx, create } from '@dojo/framework/core/vdom';
 import { node } from '@dojo/framework/core/vdom';
-// import WebMap from "@arcgis/core/WebMap";
+import WebMap from "@arcgis/core/WebMap";
 // import MapView from "@arcgis/core/views/MapView";
 // import Bookmarks from "@arcgis/core/widgets/Bookmarks";
 // import Expand from "@arcgis/core/widgets/Expand";
@@ -10,9 +10,9 @@ import * as css from './styles/Home.m.css';
 const factory = create({node});
 
 async function loadMap(container: HTMLElement) {
-	const [WebMap] = await Promise.all(
-		import("@arcgis/core/WebMap");
-	);
+	// const [WebMap] = await Promise.all(
+	// 	import("@arcgis/core/WebMap");
+	// );
 	const webmap = new WebMap({
 		portalItem: {
 			id: "aa1d3f80270146208328cf66d022e09c",
